@@ -1,4 +1,5 @@
-import logo from "./assets/images/logo.svg"
+import logo from "../assets/images/logo.svg";
+import "../styles/Balance.scss";
 
 function Balance() {
     return (

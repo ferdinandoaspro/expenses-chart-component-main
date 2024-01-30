@@ -1,0 +1,46 @@
+@import "./variables.scss";
+
+section {
+    padding: 1.5rem;
+    margin-top: 1rem;
+
+    h1 {
+        margin-bottom: 3rem;
+    }
+
+    div {
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+
+            li {
+
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                align-items: center;
+                gap: 0.5rem;
+
+                .bar {
+                    width: 45px;
+                    background-color: $soft-red;
+                    border-radius: 0.25rem;
+                }
+
+                .bar:hover {
+                    background-color: transparentize($color: $soft-red, $amount: 0.5)
+                }
+
+                .currentDay {
+                    background-color: $cyan;
+                }
+
+                .currentDay:hover {
+                    background-color: transparentize($color: $cyan, $amount: 0.5)
+                }
+            }
+        }
+    }
+}

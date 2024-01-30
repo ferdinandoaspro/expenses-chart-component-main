@@ -1,0 +1,16 @@
+@import "./variables.scss";
+
+.total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 1.5rem;
+
+    .total-section {
+        text-align: left;
+    }
+
+    .percent-section {
+        text-align: right;
+    }
+}

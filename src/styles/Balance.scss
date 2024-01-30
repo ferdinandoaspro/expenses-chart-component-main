@@ -1,0 +1,11 @@
+@import "./variables.scss";
+
+.balance-section {
+    background-color: $soft-red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: $cream;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+}

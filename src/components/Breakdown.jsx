@@ -1,11 +1,14 @@
-function Breakdown({days, expenses}) {
+import "../styles/Breakdown.scss";
+
+function Breakdown({dailySpending}) {
 
     return (
         <section>
             <h1>Spending - Last 7 days</h1>
             <div>
-                <ul>{expenses}</ul>
-                <ul>{days}</ul>
+                <ul>
+                    {dailySpending}
+                </ul>
             </div>
         </section>
     )

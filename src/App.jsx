@@ -7,20 +7,19 @@ import {useState, useEffect} from "react"
 function App() {
 
   const [isVisible, setIsVisible] = useState(false)
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 425)
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 425);
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 425)
-    }
-
-    window.addEventListener('resize', checkMobile);
-    
-    return () => {
-      window.removeEventListener('resize', checkMobile);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 425);
     };
 
-  }, [])
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const daysList = data.map((obj, index) => {
     

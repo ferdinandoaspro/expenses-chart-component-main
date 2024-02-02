@@ -9,7 +9,7 @@ section {
         
         @media (max-width: 425px) {
             font-size: 2rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
     }
 
@@ -43,6 +43,10 @@ section {
                     width: 50px;
                     background-color: $soft-red;
                     border-radius: 0.25rem;
+
+                    @media (max-width: 425px) {
+                        margin: 0.75rem 0;
+                    }
                    
                 }
 

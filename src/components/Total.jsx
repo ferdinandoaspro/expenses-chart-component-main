@@ -5,10 +5,10 @@ function Total({totalSpending}) {
         <div className="total">
             <div className="total-section">
                 <p>Total this month</p>
-                <p>${totalSpending}</p>
+                <p className="total-spending">${totalSpending}</p>
             </div>
             <div className="percent-section">
-                <p>+2.4%</p>
+                <p className="percent-difference">+2.4%</p>
                 <p>from last month</p>
             </div>
         </div>

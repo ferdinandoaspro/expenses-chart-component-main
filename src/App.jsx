@@ -2,15 +2,45 @@ import Balance from "./components/Balance.jsx"
 import Breakdown from "./components/Breakdown.jsx"
 import Total from "./components/Total.jsx"
 import data from "./assets/data.json"
+import {useState, useEffect} from "react"
 
 function App() {
-  const currentDay = new Date().getDay();
 
-  const daysList = data.map((obj, i) => {
+  const [isVisible, setIsVisible] = useState(false)
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 425)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 425)
+    }
+
+    window.addEventListener('resize', checkMobile);
+    
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+
+  }, [])
+
+  const daysList = data.map((obj, index) => {
+    
+    const currentDay = new Date().getDay();
+
+    const barClassNames = `bar ${index === currentDay - 1 ? "current-day" : ""}`
+
+    const indexIsHovered = index === isVisible;
+
+    const barHeightMultiplayer = isMobile ? 4 : 3;
+
     return (<li key={obj.day}>
-              {i === currentDay - 1 ? <div className="bar currentDay" style={{height: `${obj.amount * 3}px`}}></div> : 
-                                      <div className="bar" style={{height: `${obj.amount * 3}px`}}></div>}
-              <p>{obj.day}</p>
+              <p className="bar-amount" style={{visibility: indexIsHovered ? "visible" : "hidden"}}>${obj.amount}</p>
+              <div
+              className={barClassNames}
+              onMouseOver={() => setIsVisible(index)}
+              onMouseLeave={() => setIsVisible(false)}
+              style={{height: `${obj.amount * barHeightMultiplayer}px`}}>
+              </div>
+              <p className="bar-day">{obj.day}</p>
             </li>
           )
     }

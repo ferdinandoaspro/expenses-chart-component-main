@@ -1,43 +1,60 @@
 @import "./variables.scss";
 
 section {
-    padding: 1.5rem;
-    margin-top: 1rem;
 
     h1 {
-        margin-bottom: 3rem;
+        font-size: 1.75rem;
+        color: $dark-brown;
+        margin-bottom: 0.1rem;
+        
+        @media (max-width: 425px) {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
     }
 
-    div {
+    .chart {
+        min-height: 250px;
+        display: flex;
+        justify-content: bottom;
 
         ul {
             display: flex;
             flex-direction: row;
-            gap: 2rem;
 
             li {
-
                 display: flex;
                 flex-direction: column;
                 justify-content: end;
                 align-items: center;
                 gap: 0.5rem;
+                color: $medium-brown;
+                font-size: 0.885rem;
+                
+                .bar-amount {
+                    background-color: $dark-brown;
+                    color: $very-pale-orange;
+                    font-weight: 700;
+                    padding: 0.5rem;
+                    border-radius: 0.25rem;
+                }
 
                 .bar {
-                    width: 45px;
+                    width: 50px;
                     background-color: $soft-red;
                     border-radius: 0.25rem;
+                   
                 }
 
                 .bar:hover {
                     background-color: transparentize($color: $soft-red, $amount: 0.5)
                 }
 
-                .currentDay {
+                .current-day {
                     background-color: $cyan;
                 }
 
-                .currentDay:hover {
+                .current-day:hover {
                     background-color: transparentize($color: $cyan, $amount: 0.5)
                 }
             }

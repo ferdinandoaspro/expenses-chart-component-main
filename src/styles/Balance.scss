@@ -6,6 +6,17 @@
     flex-direction: row;
     justify-content: space-between;
     color: $cream;
-    padding: 1rem 1.5rem;
+    padding: 1.5rem;
     border-radius: 1rem;
+
+    .balance-amount {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .balance-total {
+            font-size: 1.75rem;
+            font-weight: 700;
+        }
+    }
 }

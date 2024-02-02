@@ -4,13 +4,27 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 2rem 1.5rem;
+    align-items: flex-end;
+    vertical-align: end;
+    color: $medium-brown;
 
     .total-section {
         text-align: left;
+
+        .total-spending {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: $dark-brown;
+            vertical-align: bottom;
+        }
     }
 
     .percent-section {
         text-align: right;
+
+        .percent-difference {
+            font-weight: 700;
+            color: $dark-brown;
+        }
     }
 }

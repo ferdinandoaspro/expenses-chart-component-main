@@ -5,7 +5,7 @@ function Breakdown({dailySpending}) {
     return (
         <section>
             <h1>Spending - Last 7 days</h1>
-            <div>
+            <div className="chart">
                 <ul>
                     {dailySpending}
                 </ul>

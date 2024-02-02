@@ -26,16 +26,26 @@ body {
 }
 
 main {
-    width: fit-content;
+    margin: 0 1rem;
 
     .container {
         background-color: $very-pale-orange;
         border-radius: 1rem;
+        padding: 2rem;
+        margin-top: 1.25rem;
+
+        @media (max-width: 425px) {
+            padding: 2rem 1rem;
+        }
 
         hr {
-            background-color: $cream;
-            width: calc(100% - 3rem);
-            margin: 0 auto;
+            width: 100%;
+            margin: 1.75rem auto;
+            border: 1px solid $cream;
+            
+            @media (max-width: 425px) {
+                margin: 2rem auto;
+            }
         }
     }
 }

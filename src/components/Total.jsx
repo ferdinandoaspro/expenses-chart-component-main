@@ -1,5 +1,3 @@
-import "../styles/Total.scss";
-
 function Total({totalSpending}) {
     return (
         <div className="total">

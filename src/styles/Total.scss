@@ -9,7 +9,7 @@
     color: $medium-brown;
     
     @media (max-width: 425px) {
-            font-size: 1.175rem;
+            font-size: 0.95rem;
             padding: 0 0.5rem;
         }
 
@@ -24,6 +24,7 @@
             
             @media (max-width: 425px) {
                 margin-top: 0.25rem;
+                font-size: 2rem;
             }
         }
     }

@@ -8,19 +8,18 @@ section {
         margin-bottom: 0.1rem;
         
         @media (max-width: 425px) {
-            font-size: 2rem;
+            font-size: 1.75rem;
             margin-bottom: 1rem;
         }
     }
 
     .chart {
         min-height: 250px;
-        display: flex;
-        justify-content: bottom;
 
         ul {
-            display: flex;
-            flex-direction: row;
+            display: grid;
+            grid-template-columns: repeat(1fr, 7);
+            grid-auto-flow: column;
 
             li {
                 display: flex;
@@ -29,7 +28,7 @@ section {
                 align-items: center;
                 gap: 0.5rem;
                 color: $medium-brown;
-                font-size: 0.885rem;
+                font-size: min(calc(0.4rem + 0.42vw), 0.885rem);
                 
                 .bar-amount {
                     background-color: $dark-brown;
@@ -37,14 +36,17 @@ section {
                     font-weight: 700;
                     padding: 0.5rem;
                     border-radius: 0.25rem;
+                    @media (max-width: 425px) {
+                        padding: 0.35rem;
+                    }
                 }
 
                 .bar {
-                    width: 50px;
+                    width: min(87%, 50px);
                     background-color: $soft-red;
                     border-radius: 0.25rem;
 
-                    @media (max-width: 425px) {
+                    @media (max-width: 600px) {
                         margin: 0.75rem 0;
                     }
                    
@@ -52,6 +54,10 @@ section {
 
                 .bar:hover {
                     background-color: transparentize($color: $soft-red, $amount: 0.5)
+                }
+
+                .bar-day {
+                    font-size: 0.85rem;
                 }
 
                 .current-day {

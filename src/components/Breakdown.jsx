@@ -1,5 +1,3 @@
-import "../styles/Breakdown.scss";
-
 function Breakdown({dailySpending}) {
 
     return (
